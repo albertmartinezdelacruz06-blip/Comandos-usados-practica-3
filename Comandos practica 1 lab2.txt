@@ -1,0 +1,22 @@
+Comandos practica 1 lab2
+
+1. Actualizar repositorios del sistema
+sudo apt update
+sudo apt upgrade -y
+
+
+2. Enumerar repositorios actualmente en uso
+cat /etc/apt/sources.list
+
+
+3. Buscar la herramienta en el caché de repositorios
+apt search bashtop
+
+4. Instalar Bashtop Resource Monitor
+sudo apt install bashtop -y
+
+5. Desinstalar el programa eliminando configuración
+sudo apt purge bashtop -y
+
+6. Eliminar dependencias que ya no se usan
+sudo apt autoremove -y

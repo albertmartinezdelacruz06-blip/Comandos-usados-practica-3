@@ -1,0 +1,37 @@
+Comandos practica 3 lab2
+
+1. Verificar el nuevo disco
+lsblk
+
+2. Crear partición
+sudo fdisk /dev/sdb
+n
+p
+1
+enter
+enter
+w
+
+3. Formatear como ext4
+sudo mkfs.ext4 /dev/sdb1
+
+4. Crear carpeta en el escritorio
+mkdir ~/Desktop/disco20GB
+
+5. Montar el disco
+sudo mount /dev/sdb1 ~/Desktop/disco20GB
+
+6. Crear archivo
+cd ~/Desktop/disco20GB
+touch albert.txt
+ls
+
+7. Desmontar la unidad
+sudo umount ~/Desktop/disco20GB
+
+8. Montarla en /mnt
+sudo mount /dev/sdb1 /mnt
+
+9. Verificar archivo
+cd /mnt
+ls

@@ -1,0 +1,22 @@
+Comandos practica 2 lab2
+
+1. Crear cron para actualizar el sistema a las 11:00 p.m
+sudo crontab -e
+0 23 * * * apt update && apt upgrade -y
+
+2. Reiniciar la máquina todos los domingos a las 3 a.m
+0 3 * * 0 reboot
+
+3. Usar el comando at para borrar /tmp en 1 minuto
+Ver contenido antes
+ls /tmp
+
+Programar tarea
+sudo apt install at -y
+sudo systemctl enable --now atd
+echo "rm -rf /tmp/*" | at now + 1 minute
+
+Ver tareas programadas
+atq
+Después de 1 minuto comprobar
+ls /tmp
